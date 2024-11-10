@@ -1,6 +1,14 @@
 package handler
 
-import "fmt"
+import (
+	"fmt"
+)
+
+type Args struct {
+	Message string
+}
+
+type Handler int
 
 func (h *Handler) Ping(args *Args, reply *Args) error {
 	fmt.Println("Received message: ", args.Message)
